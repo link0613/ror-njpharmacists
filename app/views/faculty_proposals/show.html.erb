@@ -1,0 +1,49 @@
+<h1>Faculty Proposal Details</h1>
+
+<h3>Submission Info:</h3>
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @faculty_propsel.name %></dd>
+  <dt>Phone Number:</dt>
+  <dd><%= @faculty_propsel.office_phone %></dd>
+  <dt>Address:</dt>
+  <dd><%= @faculty_propsel.address %></dd>
+</dl>
+<hr>
+
+<h3>Faculty Info:</h3>
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @faculty_propsel.name %></dd>
+  <dt>Address:</dt>
+  <dd><%= @faculty_propsel.address %></dd>
+  <dt>City:</dt>
+  <dd><%=  @faculty_propsel.city %></dd>
+  <dt>State:</dt>
+  <dd><%=  @faculty_propsel.state %></dd>
+  <dt>Phone Number:</dt>
+  <dd><%= @faculty_propsel.office_phone %></dd>
+  <dt>Areas of Expertise:</dt>
+  <dd><%= @faculty_propsel.area_of_expertise %></dd>
+  <dt>Project Title:</dt>
+  <dd><%= @faculty_propsel.program_title %></dd>
+  <dt>Topic Area:</dt>
+  <dd><%= @faculty_propsel.area  %></dd>
+  <dt>Project Length:</dt>
+  <dd><%= @faculty_propsel.program_length %></dd>
+  <dt>Activity Based:</dt>
+  <dd><%= @faculty_propsel.activity_based %></dd>
+  <dt>Brief Summary:</dt>
+  <dd><%= @faculty_propsel.brief_summary %></dd>
+  <dt>Submitted Proposal:</dt>
+  <dd><%= @faculty_propsel.created_at.strftime("%m/%d/%Y - %I %p") %></dd>
+  <dt>Download Proposal:</dt>
+  <dd>
+    <% @faculty_propsel.proposel_documents.each do |doc| %>
+      <%=link_to 'Download Proposal', doc.document.url(:original)%></br>
+    <%end%>
+  </dd>
+  <%if @viewing_admin%>
+     <%= link_to 'Edit', edit_faculty_proposal_path(@faculty_propsel) %> 
+  <%end%>
+

@@ -1,0 +1,55 @@
+<%= simple_form_for (nomination), url: '/process_nomination.js', remote: true do |f| %>
+  <% if nomination.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(nomination.errors.count, "error") %> prohibited this nomination from being saved:</h2>
+
+      <ul>
+      <% nomination.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+	<h3>Nominator Info:</h3>
+	
+	<div class="field"><%= f.input :nominator_name %></div>
+	<div class="field"><%= f.input :nominator_phone %></div>
+	<div class="field"><%= f.input :nominator_email %></div>
+
+	<hr>
+
+	<h3>Nominee Info:</h3>
+
+	<div class="field"><%= f.input :award_name, collection: ["Rosario J. Mannino Award","Bowl of Hygeia
+Sponsored by APhA Foundation and NASPA", "Andrew J. Preston Political Action Award", "Donald J. Wernick Academic Achievement Award", "Frederick B. Kilmer Award", "NASPA Excellence in Innovation Award
+Sponsored by Upsher-Smith", "Jesse Gaynor Award", "Mortar & Pestle Award", "William H. McNeill Award", "Pharmacist Mutual Distinguished Young Pharmacist Award", "Pharmaceutical Industry Award", "Independent Pharmacist of the Year Award", "Cardinal Health Generation Rx Champions Award", "Sidney B. Gilman  Pharmacy Technician Award", "Lifetime Achievement Award"] %></div>
+	<div class="field"><%= f.input :nominee_name %></div>
+	<div class="field"><%= f.input :nominee_address %></div>
+	<div class="field"><%= f.input :nominee_phone %></div>
+	<div class="field"><%= f.input :nominee_email %></div>
+	<div class="field"><%= f.input :nominee_title %></div>
+	<div class="field"><%= f.input :reason_for_nomination, label: 'Tell us why the candidate should receive this award' %></div>
+	<div class="field"><%= f.input :supporting_material, label: 'Supporting Material (Only 1 file may be attached. Create a compressed archive, eg, .zip to send multiple files)' %></div>
+  <div class="field">
+    <div class="form-group">
+      <%=recaptcha_tags%>
+    </div>
+  </div>
+	<div class="actions">
+	<%= f.button :submit, 'Submit Award Nomination', class: 'btn btn-primary', 'data-loading-text' => 'Submitting...'  %>
+	</div>
+<% end %>
+<script type='text/javascript'>
+$(function(){
+  function showLoading() { 
+    $('form.new_award_nomination input[type=submit]').attr('disabled','disabled').val('Loading...'); 
+  };
+  function resetLoading() { 
+    $('form.new_award_nomination input[type=submit]').removeAttr('disabled').val('Submit Nomination'); 
+  };
+  $("form.new_award_nomination")
+  .bind("ajax:loading",  showLoading)
+  .bind("ajax:complete", resetLoading);
+});
+</script>

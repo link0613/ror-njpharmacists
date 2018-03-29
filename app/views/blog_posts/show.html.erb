@@ -1,0 +1,8 @@
+<% @pg_title = @blog_post.post_title %>
+<% @subtitle = raw("<span style='text-transform:uppercase;' class='tk-myriad-pro-condensed'>#{@blog_post.created_at.to_s(:month_day_year) }</span>#{ (!@blog_post.post_subtitle.nil? && !@blog_post.post_subtitle.blank?) ? " / #{@blog_post.post_subtitle}" : ''}") %>
+<% @breadcrumbs = build_blog_breadcrumbs %>
+<% if @blog_post.featured_image.url != '/featured_images/original/missing.png'  %>
+  <%= image_tag @blog_post.featured_image.url %>
+  <br><br>
+<% end %>
+<%= raw(@blog_post.post_content) %>

@@ -1,0 +1,39 @@
+<h1>Award Nomination Details</h1>
+
+<h3>Submission Info:</h3>
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @nomination.nominator_name %></dd>
+  <dt>Phone Number:</dt>
+  <dd><%= @nomination.nominator_phone %></dd>
+  <dt>Email Address:</dt>
+  <dd><%= @nomination.nominator_email %></dd>
+</dl>
+
+<hr>
+
+<h3>Nominee Info:</h3>
+<dl class="dl-horizontal">
+  <dt>Award:</dt>
+  <dd><%= @nomination.award_name %></dd>
+  <dt>Name:</dt>
+  <dd><%= @nomination.nominee_name %></dd>
+  <dt>Address:</dt>
+  <dd><%= @nomination.nominee_address %></dd>
+  <dt>Phone Number:</dt>
+  <dd><%= @nomination.nominee_phone %></dd>
+  <dt>Email Address:</dt>
+  <dd><%= @nomination.nominee_email %></dd>
+  <dt>Title:</dt>
+  <dd><%= @nomination.nominee_title %></dd>
+  <dt>Tell us why the candidate should receive this award:</dt>
+  <dd><%= @nomination.reason_for_nomination %></dd>
+  <dt> Submission Date: </dt>
+  <dd><%= @nomination.created_at.strftime("%m/%d/%Y - %I %p")%></dd>
+  <dt>Supporting Material:</dt>
+  <dd><%= link_to 'View Uploaded Material', @nomination.supporting_material.url(:original) if @nomination.supporting_material.exists? %></dd>
+</dl>
+
+<hr>
+
+<%= link_to 'Edit Nomination', edit_award_nomination_path(@nomination) %> | <%= link_to 'Delete Nomination', @nomination, method: :delete, data: { confirm: 'Are you sure?'} %>

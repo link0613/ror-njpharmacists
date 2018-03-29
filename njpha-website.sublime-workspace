@@ -1,0 +1,1017 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"page",
+				"page_title"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"no",
+				"nowrap"
+			],
+			[
+				"bord",
+				"border-left"
+			],
+			[
+				"media",
+				"media-body"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"font-",
+				"font-weight"
+			],
+			[
+				"dropdo",
+				"dropdown-menu"
+			],
+			[
+				"return",
+				"return_val"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"btn",
+				"btn-default"
+			],
+			[
+				"body",
+				"bodyContainerMarginTop"
+			],
+			[
+				"navbar",
+				"navbar-fixed-top"
+			],
+			[
+				"carou",
+				"carousel-indicators"
+			],
+			[
+				"fina",
+				"finalize_logout"
+			],
+			[
+				"red",
+				"redirect_to"
+			],
+			[
+				"memb",
+				"membeeInfo"
+			],
+			[
+				"mem",
+				"membeeInfo"
+			],
+			[
+				"param",
+				"param_key"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"log",
+				"login_url"
+			],
+			[
+				"reg",
+				"registration_url"
+			],
+			[
+				"err",
+				"error_500"
+			],
+			[
+				"error",
+				"error_404"
+			],
+			[
+				"ch",
+				"child_pages"
+			],
+			[
+				"padd",
+				"padding-right"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"call",
+				"callout_ids"
+			],
+			[
+				"input",
+				"input_html"
+			],
+			[
+				"be",
+				"belongs_to"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "config/environments/production.rb",
+			"settings":
+			{
+				"buffer_size": 3410,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/application_controller.rb",
+			"settings":
+			{
+				"buffer_size": 3067,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/page.rb",
+			"settings":
+			{
+				"buffer_size": 9092,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 2072 files for \"binding.pry\"\n\n/Users/jsantiago/Sites/njpha-website/app/models/page.rb:\n   49      end\n   50    rescue => e\n   51:     binding.pry\n   52      if(@current_link_tag.index(/href/))\n   53        errors.add(:base, \"<p>This page contains the following invalid link_pg tag:</p><p><b>#{@current_link_tag}</b></p>\" + \n\n1 match in 1 file\n",
+			"settings":
+			{
+				"buffer_size": 353,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 107.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 530.0
+	},
+	"console":
+	{
+		"height": 125.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/jsantiago/Sites/njpha-website",
+		"/Users/jsantiago/Sites/njpha-website/app",
+		"/Users/jsantiago/Sites/njpha-website/app/controllers",
+		"/Users/jsantiago/Sites/njpha-website/app/models"
+	],
+	"file_history":
+	[
+		"/Users/jsantiago/Sites/njpha-website/test/fixtures/pages.yml",
+		"/Users/jsantiago/Sites/njpha-website/test/unit/page_test.rb",
+		"/Users/jsantiago/Sites/njpha-website/app/controllers/pages_controller.rb",
+		"/Users/jsantiago/Sites/njpha-website/app/helpers/pages_helper.rb",
+		"/Users/jsantiago/Sites/njpha-website/config/environment.rb",
+		"/Users/jsantiago/Sites/njpha-website/log/production.log",
+		"/Users/jsantiago/Sites/njpha-website/Procfile",
+		"/Users/jsantiago/Sites/njpha-website/app/models/page.rb",
+		"/Users/jsantiago/Sites/njpha-website/Gemfile.lock",
+		"/Users/jsantiago/Sites/njpha-website/Gemfile",
+		"/Users/josesantiagojr/Sites/njpha-website/app/models/award_nomination.rb",
+		"/Users/josesantiagojr/Sites/njpha-website/app/views/award_nominations/show.html.erb",
+		"/Users/josesantiagojr/Sites/njpha-website/app/mailers/award_nominations_mailer.rb",
+		"/Users/josesantiagojr/Sites/njpha-website/app/views/award_nominations_mailer/award_nomination_confirmation.html.erb",
+		"/Users/josesantiagojr/Sites/njpha-website/app/views/award_nominations/_form.html.erb",
+		"/Users/josesantiagojr/Sites/njpha-website/config/database.yml",
+		"/Users/josesantiagojr/Sites/njpha-website/app/controllers/award_nominations_controller.rb",
+		"/Users/josesantiagojr/Sites/njpha-website/app/views/application/_award_nomination_form.html.erb",
+		"/Users/josesantiagojr/Library/Application Support/Sublime Text 3/Packages/Terminal/Default (OSX).sublime-keymap",
+		"/Users/josesantiagojr/Library/Application Support/Sublime Text 3/Packages/MacTerminal/Default.sublime-keymap",
+		"/Users/josesantiagojr/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/josesantiagojr/Sites/njpha-website/public/pdfjs/web/images/annotation-insert.svg",
+		"/Users/josesantiagojr/Sites/njpha-website/app/views/devise/mailer/confirmation_instructions.html.erb",
+		"/Users/josesantiagojr/Sites/njpha-website/app/views/pages/index.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/app/views/application/_link_pg.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/app/assets/javascripts/application.js",
+		"/Users/jsantiago/Sites/njpha-website/app/views/layouts/application.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/app/views/pages/edit.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/app/views/pages/_form.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/app/assets/stylesheets/application.css",
+		"/Users/jsantiago/Sites/njpha-website/app/assets/stylesheets/bootstrap_and_overrides.css.less",
+		"/Users/jsantiago/Sites/njpha-website/app/views/pages/index.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/app/views/blog_posts/index.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/app/views/pages/manage_callouts.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/app/views/callouts/show.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/config/initializers/simple_form.rb",
+		"/Users/jsantiago/Sites/njpha-website/app/inputs/collection_radio_buttons_input.rb",
+		"/Users/jsantiago/Sites/njpha-website/app/inputs/collection_check_boxes_input.rb",
+		"/Users/jsantiago/Sites/njpha-website/app/assets/images/arrow.png",
+		"/Users/jsantiago/Sites/njpha-website/app/views/application/_glyphicon.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/config/initializers/liquid_tags/glyphicon.rb",
+		"/Users/jsantiago/Sites/njpha-website/app/views/blog_posts/_form.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/app/helpers/application_helper.rb",
+		"/Users/jsantiago/Sites/njpha-website/app/views/settings/index.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/app/views/settings/edit.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/app/views/pages/_callout_form.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/app/views/callouts/_form.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/app/views/callouts/index.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/app/views/blogs/show.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/app/views/blogs/index.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/app/views/blogs/_form.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/public/bootstrap_and_overrides.css.less.bkup",
+		"/Users/jsantiago/Sites/njpha-website/app/views/application/_sidebar.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/app/views/application/_gallery.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/app/assets/stylesheets/codemirror.css",
+		"/Users/jsantiago/Sites/njpha-website/app/controllers/application_controller.rb",
+		"/Users/jsantiago/Sites/njpha-website/app/models/setting.rb",
+		"/Users/jsantiago/Sites/njpha-website/config/routes.rb",
+		"/Users/jsantiago/Sites/njpha-website/app/views/pages/search_results.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/app/assets/javascripts/harvey-size-change-detection.js",
+		"/Users/jsantiago/Sites/njpha-website/app/assets/stylesheets/scaffolds.css.scss",
+		"/Users/jsantiago/Sites/njpha-website/app/views/pages/show.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/app/models/callout.rb",
+		"/Users/jsantiago/Sites/njpha-website/config/initializers/liquid_tags/post_login_params.rb",
+		"/Users/jsantiago/Sites/njpha-website/app/views/application/_post_login_params.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/db/migrate/20140417182552_add_membee_fields_to_users.rb",
+		"/Users/jsantiago/Sites/njpha-website/app/views/devise/shared/_links.erb",
+		"/Users/jsantiago/Sites/njpha-website/app/views/devise/sessions/new.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/db/seeds.rb",
+		"/Users/jsantiago/Sites/njpha-website/db/migrate/20140416194841_devise_create_users.rb",
+		"/Users/jsantiago/Sites/njpha-website/app/views/devise/passwords/new.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/app/views/devise/mailer/reset_password_instructions.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/app/views/devise/confirmations/new.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/app/views/devise/passwords/edit.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/app/views/devise/registrations/edit.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/app/views/devise/registrations/new.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/app/views/users/new.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/lib/templates/erb/scaffold/_form.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/config/deploy.rb",
+		"/Users/jsantiago/Sites/njpha-website/app/assets/javascripts/ckeditor/config.js",
+		"/Users/jsantiago/Sites/njpha-website/config/database.yml",
+		"/Users/jsantiago/Sites/njpha-website/app/assets/javascripts/ckeditor/contents.css",
+		"/Users/jsantiago/Sites/njpha-website/app/assets/javascripts/ckeditor/insert_blank.js",
+		"/Users/jsantiago/Sites/njpha-website/app/views/pages/error_404.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/config/initializers/liquid_tags/link.rb",
+		"/Users/jsantiago/Sites/njpha-website/app/views/pages/error_500.html.erb",
+		"/Users/jsantiago/Sites/njpha-website/config/initializers/page_exists_constraint.rb",
+		"/Users/jsantiago/Sites/njpha-website/config/application.rb",
+		"/Users/jsantiago/Sites/njpha-website/app/helpers/blogs_helper.rb",
+		"/Users/jsantiago/Sites/njpha-website/config/initializers/clearance.rb",
+		"/Users/jsantiago/Sites/njpha-website/app/assets/javascripts/pages.js.coffee",
+		"/Users/jsantiago/Sites/njpha-website/app/assets/javascripts/pages.js",
+		"/Users/jsantiago/Sites/njpha-website/app/assets/javascripts/excanvas/LICENSE",
+		"/Users/jsantiago/Sites/njpha-website/db/migrate/20140409032001_create_pages_and_callouts.rb",
+		"/Users/jsantiago/Sites/njpha-website/app/models/ckeditor/picture.rb",
+		"/Users/jsantiago/Sites/njpha-website/config/environments/development.rb",
+		"/Users/jsantiago/Sites/njpha-website/Rakefile",
+		"/Users/jsantiago/Sites/njpha-website/db/migrate/20130918142942_add_directors_project_to_users.rb",
+		"/Users/jsantiago/Sites/njpha-website/config/initializers/session_store.rb",
+		"/Users/jsantiago/Sites/njpha-website/config/initializers/secret_token.rb",
+		"/Users/jsantiago/Sites/njpha-website/config/environments/test.rb",
+		"/Users/jsantiago/Sites/njpha-website/config/environments/production.rb",
+		"/Users/jsantiago/Sites/njpha-website/config.ru",
+		"/Users/jsantiago/Sites/njpha-website/app/models/ckeditor/attachment_file.rb",
+		"/Users/jsantiago/Sites/njpha-website/config/initializers/liquid_tags/no_request_controller.rb",
+		"/Users/jsantiago/Sites/njpha-website/db/migrate/20140409031802_create_callouts.rb",
+		"/Users/jsantiago/Sites/njpha-website/config/initializers/liquid_tags/gallery.rb",
+		"/Users/jsantiago/Sites/njpha-website/config/initializers/no_request_controller.rb",
+		"/Users/jsantiago/Sites/njpha-website/config/initializers/NoRequestController.rb",
+		"/Users/jsantiago/Sites/sinatra-harvest-integration.rb"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 94.0,
+		"where_history":
+		[
+			"",
+			"/Users/jsantiago/Sites/njpha-website"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"binding.pry",
+			"njpharma",
+			"</dd>",
+			"<dd>",
+			"<dt>",
+			"</dt>",
+			"text_area",
+			"textarea",
+			"text-area",
+			"border-bottom:0px",
+			"border-bottom: 0px",
+			"4f97a5",
+			".navbar .nav li.dropdown.open",
+			"justified",
+			".nav-tabs.nav-justified > .dropdown .dropdown-menu",
+			"glyph",
+			".main-navbar.navbar",
+			".main-navbar.navbar .nav>li>a",
+			"media",
+			"label",
+			".footer",
+			".navbar",
+			"nav-divider",
+			".media, .media-body",
+			"<i",
+			".nav",
+			"nav-pill",
+			"build_",
+			"breadcrumbs",
+			"donation",
+			"donate",
+			"social",
+			"ul",
+			"footer",
+			".inline",
+			" inline",
+			"inline ",
+			"inline",
+			"unstyled",
+			"social",
+			"Open Preview",
+			"btn-info",
+			"btn",
+			"span[0-9]+",
+			"span",
+			"row",
+			"col",
+			"btn-mini",
+			"glyphi",
+			"@header",
+			"14px",
+			"margin-top",
+			"callout",
+			"-80",
+			"active",
+			".active",
+			"homeCar",
+			"myCarousel",
+			"@settings",
+			"@settings=",
+			"#myCarousel",
+			"4px solid",
+			"4px",
+			"border: 4px",
+			"@alias",
+			"new_user_reg",
+			".build_page_url",
+			", html: { class: 'form-horizontal' }",
+			"-horizontal",
+			"user_logout",
+			"user_login",
+			".footer-column",
+			"social-",
+			"not_found",
+			"render_error",
+			"build_page_listing",
+			"border-ra",
+			"20px",
+			"padding-ri",
+			"submenu",
+			"@breadcrumbs",
+			"build_blog_breadcrumbs",
+			"build_header_nav_column",
+			".dropdown-menu",
+			"dropdown-menu",
+			"dropdown",
+			"@pg",
+			"layout",
+			"aws",
+			"drama",
+			"DramaLeague"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"</p>",
+			"",
+			"<p>",
+			"<br>",
+			"btn-sm",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "config/environments/production.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3410,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/controllers/application_controller.rb",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 3067,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/models/page.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9092,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1021,
+								1021
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 533.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 353,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										144,
+										155
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								151,
+								151
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "njpha-website.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"page",
+				"app/models/page.rb"
+			],
+			[
+				"en",
+				"config/environment.rb"
+			],
+			[
+				"prod",
+				"config/environments/production.rb"
+			],
+			[
+				"dat",
+				"config/database.yml"
+			],
+			[
+				"bootstr",
+				"app/assets/stylesheets/bootstrap_and_overrides.css.less"
+			],
+			[
+				"appli",
+				"app/assets/stylesheets/application.css"
+			],
+			[
+				"index",
+				"app/views/pages/index.html.erb"
+			],
+			[
+				"page.",
+				"app/models/page.rb"
+			],
+			[
+				"appl",
+				"app/assets/javascripts/application.js"
+			],
+			[
+				"applic",
+				"app/assets/stylesheets/application.css"
+			],
+			[
+				"gemf",
+				"Gemfile"
+			],
+			[
+				"applica",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"sear",
+				"app/views/pages/search_results.html.erb"
+			],
+			[
+				"pplication.c",
+				"app/assets/stylesheets/application.css"
+			],
+			[
+				"application.h",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"sideb",
+				"app/views/application/_sidebar.html.erb"
+			],
+			[
+				"call",
+				"app/models/callout.rb"
+			],
+			[
+				"rou",
+				"config/routes.rb"
+			],
+			[
+				"route",
+				"config/routes.rb"
+			],
+			[
+				"application.cs",
+				"app/assets/stylesheets/application.css"
+			],
+			[
+				"rout",
+				"config/routes.rb"
+			],
+			[
+				"applicat",
+				"app/assets/stylesheets/application.css"
+			],
+			[
+				"pages",
+				"app/controllers/pages_controller.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 340.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

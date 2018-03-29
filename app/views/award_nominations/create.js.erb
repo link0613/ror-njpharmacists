@@ -1,0 +1,16 @@
+<% if @verified_recaptcha && @mailing %>
+	<% if !@nomination.new_record? %>
+		$("#new_award_nomination")[0].reset();
+		$("#new_award_nomination").append("<div class='alert fade in alert-success alert-dismissable'><button type='button' data-dismiss='alert' class='close' aria-hidden='true' >×</button> <h3>Thank you for your submission.</h3><p>The reviewing committee greatly appreciates your taking the time to nominate a candidate.</p><p><br><br></p></div>");
+	<% else %>
+		$("#new_award_nomination").append("<div class='alert fade in alert-danger alert-dismissable'><button type='button' data-dismiss='alert' class='close' aria-hidden='true' >×</button><h3>Unfortunately, your submission could not be processed at this time.</h3><p>Please be sure that all required fields have been filled, including the Supporting Materials file upload. If you have done so, then please wait one second and try again. If you continue to encounter issues submitting your nomination, please contact us at 609-275-4246.</p>")
+	<% end %>
+<% else %>
+	<% if @mailing %>
+		$("#new_award_nomination")[0].reset();
+		$("#new_award_nomination").append("<div class='alert fade in alert-danger alert-dismissable'><button type='button' data-dismiss='alert' class='close' aria-hidden='true' >×</button> <h3>Sorry and one more item.</h3><p>reCAPTCHA verification failed, please try again. </p><p><br><br></p></div>")
+	<% else %>
+		$("#new_award_nomination")[0].reset();
+		$("#new_award_nomination").append("<div class='alert fade in alert-danger alert-dismissable'><button type='button' data-dismiss='alert' class='close' aria-hidden='true' >×</button><h3>Unfortunately, your submission could not be processed at this time.</h3><p>Please be sure that all required fields have been filled, including the Supporting Materials file upload. If you have done so, then please wait one second and try again. If you continue to encounter issues submitting your nomination, please contact us at 609-275-4246.</p>")
+	<% end %>
+<% end %>

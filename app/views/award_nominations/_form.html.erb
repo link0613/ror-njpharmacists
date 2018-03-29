@@ -1,0 +1,50 @@
+<%= simple_form_for @nomination do |f| %>
+  <% if @nomination.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@nomination.errors.count, "error") %> prohibited this nomination from being saved:</h2>
+
+      <ul>
+      <% @nomination.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+	<h3>Nominator Info:</h3>
+	
+	<div class="field"><%= f.input :nominator_name %></div>
+	<div class="field"><%= f.input :nominator_phone %></div>
+	<div class="field"><%= f.input :nominator_email %></div>
+
+
+	<hr>
+
+	<h3>Nominee Info:</h3>
+
+	<div class="field"><%= f.input :award_name %></div>
+	<div class="field">
+		<%= f.label :award_date %>
+		<%= f.text_field :award_date, class: "string required form-control datepicker", required: true %>
+	</div>
+	<div class="field"><%= f.input :nominee_name %></div>
+	<div class="field"><%= f.input :nominee_address %></div>
+	<div class="field"><%= f.input :nominee_phone %></div>
+	<div class="field"><%= f.input :nominee_email %></div>
+	<div class="field"><%= f.input :nominee_title %></div>
+	<div class="field"><%= f.input :reason_for_nomination, label: 'Tell us why the candidate should receive this award' %></div>
+	<div class="field"><%= f.input :supporting_material, label: 'Supporting Material (Only 1 file may be attached. Create a compressed archive, eg .zip, to send multiple files)' %></div>
+	
+	<div class="actions">
+	<%= f.button :submit, 'Submit Award Nomination', class: 'btn btn-primary' %>
+	</div>
+<% end %>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.datepicker').datepicker({
+    	format: 'dd/mm/yyyy',
+    	autoclose: true,
+    });
+  });
+</script>

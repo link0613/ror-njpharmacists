@@ -1,0 +1,22 @@
+<h1>Award Nominations</h1>
+<table class='table table-striped'>
+	<tr>
+		<th>Nominator Name</th>
+		<th>Nominee Name</th>
+		<th>
+	</tr>
+	<% AwardNomination.all.each do |nomination| %>
+		<tr>
+			<td><%= nomination.nominator_name %></td>
+			<td><%= nomination.nominee_name %></td>
+			<td>
+				<%= link_to 'View Nomination Details', award_nomination_path(nomination), class: 'btn btn-primary' %>
+			</td>
+		</tr>
+	<% end %>
+</table>
+
+
+<br>
+
+<%= link_to 'Add New Award', new_award_nomination_path, class: "btn" %>

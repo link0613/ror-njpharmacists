@@ -1,0 +1,19 @@
+<% 
+
+	if is_modal == 'true'
+		if(pg_url.index('.pdf') != nil)
+			pg_url = "#{pg_url}"
+		else
+			pg_url = "#{pg_url}?layout=false"
+		end
+		link_classes = "#{link_classes} lightview"
+		dataObj = { "lightview-type" => 'iframe'}
+	else
+		dataObj = {}
+	end 
+
+	if link_type =~ /button/i
+		link_classes = "btn btn-default #{link_classes}"
+	end
+
+%><%= link_to raw(strip_tags(title.strip)), "#{strip_tags(pg_url)}", target: link_target, class: link_classes, data: dataObj%>

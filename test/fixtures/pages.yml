@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  page_title: MyString
+  url_alias: MyString
+  template: 
+  meta_keywords: MyString
+  meta_description: MyString
+  page_content: MyText
+  parent_page: 
+
+two:
+  page_title: MyString
+  url_alias: MyString
+  template: 
+  meta_keywords: MyString
+  meta_description: MyString
+  page_content: MyText
+  parent_page: 

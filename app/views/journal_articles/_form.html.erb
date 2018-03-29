@@ -1,0 +1,24 @@
+<%= simple_form_for @journal do |f| %>
+  <% if @journal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@journal.errors.count, "error") %> prohibited this journal from being saved:</h2>
+
+      <ul>
+      <% @journal.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+	<h3>JournalInfo:</h3>
+	
+	<div class="field"><%= f.input :name %></div>
+	<div class="field"><%= f.input :phone %></div>
+	<div class="field"><%= f.input :email %></div>
+  <div class="field"><%= f.input :article_title %></div>
+  <div class="field"><%= f.input :abstract, label: 'Abstract',:as => :text%></div>
+  <div class="actions">
+  <%= f.button :submit, 'Submit Journal Article', class: 'btn btn-primary' %>
+  </div>
+<%end%>

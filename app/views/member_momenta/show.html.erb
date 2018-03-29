@@ -1,0 +1,20 @@
+<h3>Momentum Info:</h3>
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @member_momentum.name %></dd>
+  <dt>About recognition:</dt>
+  <dd><%= @member_momentum.about_recognition %></dd>
+  <dt>Momentum date:</dt>
+  <dd><%= @member_momentum.momentum_date %></dd>
+  <dt>Momentum Email:</dt>
+  <dd><%= @member_momentum.email%></dd>
+  <dt>Member-attachment:</dt>
+  <% if @member_momentum.member_attachment.exists? %>
+    <dd><%= image_tag(@member_momentum.member_attachment,style:"max-width: 100%;max-height: 100px;") %></dd>
+  <% else %>
+    <dd>File not present</dd>
+  <% end %>
+</dl>
+
+<%= link_to 'Edit', edit_member_momentum_path(@member_momentum) %> |
+<%= link_to 'Back', member_momenta_path %>

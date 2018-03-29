@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated at http://www.timestampgenerator.com/tools/xml-sitemap-from-list/ -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+	<loc>http://njpharmacists.org/</loc>
+	<priority>1</priority>
+	<changefreq>weekly</changefreq>
+</url>
+<url>
+	<loc>http://njpharmacists.org/events</loc>
+	<priority>1</priority>
+	<changefreq>monthly</changefreq>
+</url>
+<url>
+	<loc>http://njpharmacists.org/events/annual-convention</loc>
+	<priority>1</priority>
+	<changefreq>monthly</changefreq>
+</url>
+<url>
+	<loc>http://njpharmacists.org/events/march-madness</loc>
+	<priority>1</priority>
+	<changefreq>monthly</changefreq>
+</url>
+<url>
+	<loc>http://njpharmacists.org/events/legislative-day</loc>
+	<priority>1</priority>
+	<changefreq>monthly</changefreq>
+</url>
+<url>
+	<loc>http://njpharmacists.org/continuing-education</loc>
+	<priority>1</priority>
+	<changefreq>monthly</changefreq>
+</url>
+<url>
+	<loc>http://njpharmacists.org/continuing-education/regional-programs</loc>
+	<priority>1</priority>
+	<changefreq>monthly</changefreq>
+</url>
+<url>
+	<loc>http://njpharmacists.org/continuing-education/webinar-ce-programs</loc>
+	<priority>1</priority>
+	<changefreq>monthly</changefreq>
+</url>
+<url>
+	<loc>http://njpharmacists.org/continuing-education/home-study</loc>
+	<priority>1</priority>
+	<changefreq>monthly</changefreq>
+</url>
+<url>
+	<loc>http://njpharmacists.org/continuing-education/certificate</loc>
+	<priority>1</priority>
+	<changefreq>monthly</changefreq>
+</url>
+<url>
+	<loc>http://njpharmacists.org/continuing-education/academies</loc>
+	<priority>1</priority>
+	<changefreq>monthly</changefreq>
+</url>
+<url>
+	<loc>http://njpharmacists.org/home/donate</loc>
+	<priority>.5</priority>
+	<changefreq>monthly</changefreq>
+</url>
+<url>
+	<loc>http://njpharmacists.org/about</loc>
+	<priority>.5</priority>
+	<changefreq>monthly</changefreq>
+</url>
+<url>
+	<loc>http://njpharmacists.org/about/regional-organization</loc>
+	<priority>.5</priority>
+	<changefreq>monthly</changefreq>
+</url>
+<url>
+	<loc>http://njpharmacists.org/about/leadership</loc>
+	<priority>.5</priority>
+	<changefreq>monthly</changefreq>
+</url>
+<url>
+	<loc>http://njpharmacists.org/about/committees</loc>
+	<priority>.5</priority>
+	<changefreq>monthly</changefreq>
+</url>
+<url>
+	<loc>http://njpharmacists.org/membership</loc>
+	<priority>.5</priority>
+	<changefreq>monthly</changefreq>
+</url>
+<url>
+	<loc>http://njpharmacists.org/membership/benefits</loc>
+	<priority>.5</priority>
+	<changefreq>monthly</changefreq>
+</url>
+<url>
+	<loc>http://njpharmacists.org/membership/join-renew</loc>
+	<priority>.5</priority>
+	<changefreq>monthly</changefreq>
+</url>
+<url>
+	<loc>http://njpharmacists.org/membership/awards</loc>
+	<priority>.5</priority>
+	<changefreq>monthly</changefreq>
+</url>
+<url>
+	<loc>http://njpharmacists.org/membership/student-chapter</loc>
+	<priority>.5</priority>
+	<changefreq>monthly</changefreq>
+</url>
+<url>
+	<loc>http://njpharmacists.org/political-action</loc>
+	<priority>.5</priority>
+	<changefreq>monthly</changefreq>
+</url>
+<url>
+	<loc>http://njpharmacists.org/political-action/advocacy</loc>
+	<priority>.5</priority>
+	<changefreq>monthly</changefreq>
+</url>
+<url>
+	<loc>http://njpharmacists.org/political-action/njpha-pac</loc>
+	<priority>.5</priority>
+	<changefreq>monthly</changefreq>
+</url>
+<url>
+	<loc>http://njpharmacists.org/resources</loc>
+	<priority>.5</priority>
+	<changefreq>monthly</changefreq>
+</url>
+<url>
+	<loc>http://njpharmacists.org/resources/journal</loc>
+	<priority>.5</priority>
+	<changefreq>monthly</changefreq>
+</url>
+<url>
+	<loc>http://njpharmacists.org/resources/career-center</loc>
+	<priority>.5</priority>
+	<changefreq>monthly</changefreq>
+</url>
+<url>
+	<loc>http://njpharmacists.org/resources/important-links</loc>
+	<priority>.5</priority>
+	<changefreq>monthly</changefreq>
+</url>
+<url>
+	<loc>http://njpharmacists.org/resources/annual-report</loc>
+	<priority>.5</priority>
+	<changefreq>monthly</changefreq>
+</url>
+<url>
+	<loc>http://njpharmacists.org/contact-us</loc>
+	<priority>.5</priority>
+	<changefreq>monthly</changefreq>
+</url>
+
+</urlset>

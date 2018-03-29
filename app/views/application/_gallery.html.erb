@@ -1,0 +1,60 @@
+<!-- Slider -->
+<div class="row gallery-embed">
+        <div class="col-xs-8" id="slider">
+                <!-- Top part of the slider -->
+                <div class="row">
+                        <div class="col-xs-8" id="carousel-bounding-box" style="overflow: hidden;">
+                                <div id="<%= id %>" class="carousel slide">
+                                        <!-- Carousel items -->
+                                        <div class="carousel-inner" style="display: inline; vertical-align: middle;">
+                                                <% images.each_with_index do |img,index| %>
+                                                      <div class="<%= index == 0 ? 'active' : ''%> item" data-slide-number="<%= index %>">
+                                                        <img src="<%= img.strip %>" />
+                                                      </div>
+                                                <% end %>
+                                        </div>
+                                        <!-- Carousel nav -->
+                                        <a class="carousel-control left" href="#<%= id %>" data-slide="prev" style="height:100%;"><div style="position:relative;top:42%;">&lt;</div></a>
+                                        <a class="carousel-control right" href="#<%= id %>" data-slide="next" style="height:100%;"><div style="position:relative;top:42%;">&gt;</div></a>
+
+                                </div>
+                        </div>
+                </div>
+        </div>
+</div> <!--/Slider-->
+
+<div class="row hidden-phone" id="slider-thumbs">
+        <div class="col-xs-8">
+                <!-- Bottom switcher of slider -->
+                <ul class="thumbnails">
+                  <% images.each_with_index do |img,index| %>
+                        <li class="col-xs-2">
+                                <a class="thumbnail" id="carousel-selector-<%= index %>">
+                                        <img src="<%= img.strip %>" style="max-height:75px;min-height:75px;" />
+                                </a>
+                        </li>
+                  <% end %>
+                </ul>
+        </div>
+</div>
+
+<script>
+  jQuery(document).ready(function($) {
+ 
+        $("#<%= id %>").carousel({
+                interval: 8000
+        });
+ 
+        $('#carousel-text').html($('#slide-content-0').html());
+ 
+        //Handles the carousel thumbnails
+        $('[id^=carousel-selector-]').click( function(){
+                var id_selector = $(this).attr("id");
+                var id = id_selector.substr(id_selector.length -1);
+                var id = parseInt(id);
+                $('#<%= id %>').carousel(id);
+        });
+ 
+ 
+});
+</script>

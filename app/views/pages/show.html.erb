@@ -1,0 +1,29 @@
+<div class='pg-copy'%>
+  <% if params[:path] == "resources/journal"%>
+    <% 
+      instance_vars = {}
+      @article ||= JournalArticle.new
+      instance_vars[:article] = @article
+    %>
+    <%= raw(render_liquid_content_article(@content, instance_vars)) %>
+  <%elsif params[:path] == "resources/CE_proposals"%>  
+    <% 
+      instance_vars = {}
+      @faculty_proposel ||= FacultyPropsel.new
+      @proposel_document = @faculty_proposel.proposel_documents.build
+      instance_vars[:faculty_proposel] =  @faculty_proposel
+      instance_vars[:proposel_document] = @proposel_document
+      instance_vars[:path] = '/resources/faculty_proposals.js'
+      instance_vars[:remote] = true
+
+    %>
+    <%= raw(render_liquid_faculty_proposel(@content, instance_vars)) %>
+  <%else%>
+    <% 
+      instance_vars = {}
+      @nomination ||= AwardNomination.new
+      instance_vars[:nomination] = @nomination
+    %>
+    <%= raw(render_liquid_content(@content, instance_vars)) %>
+  <% end %>
+</div>

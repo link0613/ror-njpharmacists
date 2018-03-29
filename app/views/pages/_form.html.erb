@@ -1,0 +1,129 @@
+<%= simple_form_for @page do |f| %>
+  <% if @page.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@page.errors.count, "error") %> prohibited this page from being saved:</h2>
+   
+      <ul>
+      <% @page.errors.full_messages.each do |msg| %>
+        <li><%= simple_format (msg) %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="btn-group pull-right">
+    <%= f.button :submit, class: 'btn btn-primary' %>
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+      <span class="caret"></span>
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+      <li><%= link_to 'Update and Continue Editing', "javascript:$('#continue_editing').val('1');$('form.simple_form').submit();" %></li>
+      <li><%= link_to 'Open Preview', @page.build_page_url, target: '_blank' %></li>
+      <li class='divider'></li>
+      <% unless @page.id.nil? %>
+      <li><%= link_to 'Delete Page',
+                            page_path(@page),
+                            method: :delete,
+                            data: { confirm: 'Are you sure?' },
+                            style: '' %></li>
+      <li class='divider'></li>
+      <% end %>
+      <li><%= link_to 'Back to Page Manager', pages_path %></li>
+    </ul>
+  </div>
+  <br>
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#pg-options" data-toggle="tab">Page Settings</a></li>
+    <li><a href="#menu-options" data-toggle="tab">Menu Settings</a></li>
+    <li><a href="#seo-options" data-toggle="tab">SEO Settings</a></li>
+  </ul>
+
+  <div class='tab-content'>
+    <div class="tab-pane active" id="pg-options">
+      <div class='row'>
+        <div class='col-xs-6'>
+
+          <br>
+          <%= f.input :page_title %><br>
+          <%= f.input :url_alias, as: :string, label: raw("URL Alias <span class='popover-toggle' data-container='body' data-placement='right' data-trigger='click hover' data-html='true' data-toggle='popover' data-title='What is a URL Alias?' data-content=\"Becomes part of this page's URL, so use hyphens instead of spaces: e.g. a value of 'about-us' becomes 'http://website.com/about-us'\"><span class='glyphicon glyphicon-search'></span></span>") %>
+
+          <br>
+          <h4>Options:</h4>
+
+          <label class="checkbox">
+            <%= f.check_box :is_members_only %> Only Viewable by Members
+          </label>
+
+          <label class="checkbox">
+            <%= f.check_box :is_homepage %> Make This Page the Homepage
+          </label>
+
+          <label class="checkbox">
+            <%= f.check_box :is_redirect %> Redirects to URL
+          </label>
+          <div style='margin-left:20px;'>
+            <%= f.input :redirect_url, as: :string, label: 'Redirect To Following URL:' %>
+          </div>
+          <br>
+        </div>
+      </div>
+      <%= f.input :page_content, as: :ckeditor, input_html: { ckeditor: { filebrowserImageBrowseUrl: '/ckeditor/pictures', filebrowserImageUploadUrl: '/ckeditor/pictures' } } %>
+    </div>
+    
+    <div class="tab-pane" id="menu-options">
+      <div class='row'>
+        <div class='col-xs-7'>
+          <br>
+          <%= f.association :parent_page, collection: Page.where.not(id: @page.id).order(page_title: :desc).all, label_method: 'page_title' %>
+          
+          <label class="checkbox">
+            <%= f.check_box :is_private %> Accessible only by CMS Admins
+          </label>
+
+          <label class="checkbox">
+            <%= f.check_box :include_in_header_menu %> Show in Header Menu
+          </label>
+
+          <label class="checkbox">
+            <%= f.check_box :include_in_footer_menu %> Show in Footer Menu
+          </label>
+          
+          <%= f.input :order_num, label: 'Menu Order Number (in relation to pages on same hierarchy level)' %><br>
+        </div>
+      </div>
+    </div>
+    
+    <div class="tab-pane" id="seo-options">
+      <br>
+      <%= f.input :meta_title, label: raw("Meta Title <span class='popover-toggle' data-container='body' data-placement='right' data-trigger='click hover' data-html='true' data-toggle='popover' data-title='Override the Page Title (Optional)' data-content=\"Allow visitors to see this as the title of this page and use the Page Title (see Page Options tab) for your own internal reference in the Page Manager. Also populates the browser title bar and is used in Google Search results listings.\"><span class='glyphicon glyphicon-search'></span></span>") %>
+      <%= f.input :meta_keywords, label: 'Meta Keywords' %>
+      <%= f.input :meta_description, label: 'Meta Description' %>
+    </div>
+  </div>
+  <br>
+  <%= hidden_field_tag 'continue_editing' %>
+  
+  <div class="btn-group pull-right">
+    <%= f.button :submit, class: 'btn btn-lg btn-primary' %>
+    <button type="button" class="btn btn-lg btn-primary dropdown-toggle" data-toggle="dropdown">
+      <span class="caret"></span>
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+      <li><%= link_to 'Update and Continue Editing', "javascript:$('#continue_editing').val('1');$('form.simple_form').submit();" %></li>
+      <li><%= link_to 'Open Preview', @page.build_page_url, target: '_blank' %></li>
+      <li class='divider'></li>
+      <% unless @page.id.nil? %>
+        <li><%= link_to 'Delete Page',
+                              page_path(@page),
+                              method: :delete,
+                              data: { confirm: 'Are you sure?' },
+                              style: '' %></li>
+        <li class='divider'></li>
+      <% end %>
+      <li><%= link_to 'Back to Page Manager', pages_path %></li>
+    </ul>
+  </div>
+
+  <br><br>
+<% end %>

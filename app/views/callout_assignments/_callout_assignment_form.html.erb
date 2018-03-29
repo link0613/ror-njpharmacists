@@ -1,0 +1,14 @@
+<%= simple_form_for [@page, @callout_assignment] do |f| %>
+
+  <%= f.hidden_field :page_id, value: params[:page_id] %>
+  <%= f.hidden_field :callout_id %>
+  <%= f.hidden_field :order_num %>
+  <% Callout.all.each do |callout| %>
+        <label class="checkbox">
+            <%= link_to "Assign to Page", "javascript:$('#callout_assignment_callout_id').val('#{callout.id}');$('.simple_form').submit();", class: 'btn btn-sm btn-primary' %>
+            <%= callout.callout_title %>
+
+        </label>
+  <% end %>
+
+<% end %>

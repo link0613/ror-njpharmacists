@@ -1,0 +1,33 @@
+<% @pg_title = @blog.blog_title %>
+<% @breadcrumbs = build_blog_breadcrumbs %>
+<% @blog_posts = @blog.blog_posts %>
+<% @blog_posts.page(params[:page]).each do |post| %>
+
+  <div class="row blog-entry">
+    <div class="col-xs-4">
+      <%= image_tag post.featured_image.url %>
+    </div>
+    <div class="col-xs-4" style="margin-left:10px;">
+      <a href="<%= build_blog_post_url(post) %>" target="_blank"><h4 class="tk-myriad-pro-condensed"><%= raw(post.post_title) %></h4></a>
+      <h5 class="tk-myriad-pro-condensed"><%= raw(post.post_subtitle) %></h5>
+      <h7 class="tk-myriad-pro-condensed"><%= post.created_at.to_s(:month_day_year) %></h7>
+      <p>
+        <%= raw(sanitize(post.post_content, tags: []).truncate(200)) %>  
+      </p>
+      <%= link_to 'Edit Post', edit_blog_blog_post_path(post.blog,post), class: 'btn btn-primary' %>
+      <%= link_to 'Preview Post', build_blog_post_url(post), target: :blank, class: "btn btn-default" %>
+      <%= link_to 'Delete',
+                      blog_blog_post_path(post.blog,post),
+                      method: :delete,
+                      data: { confirm: t('.confirm', default: t("helpers.links.confirm", default: 'Are you sure?')) },
+                      class: 'btn btn-danger',
+                      style: 'display:inline-block;' %>
+    </div>
+  </div>
+
+<% end %>
+
+
+<div class="digg_pagination pull-right">
+<%= will_paginate @blog_posts.page(params[:page]), container: false  %>
+</div>

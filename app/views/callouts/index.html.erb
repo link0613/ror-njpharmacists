@@ -1,0 +1,27 @@
+<h1>Listing callouts</h1>
+
+<table cellpadding='10' class='table table-striped'>
+  <thead>
+    <tr>
+      <th>Callout title</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @callouts.each do |callout| %>
+      <tr>
+        <td><%= callout.callout_title %></td>
+        <td>
+          <%= link_to 'Show', callout, class: 'btn btn-default btn-sm btn-primary' %>
+          <%= link_to 'Edit', edit_callout_path(callout), class: 'btn btn-default btn-sm' %>
+          <%= link_to 'Destroy', callout, class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Callout', new_callout_path %>

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  award_name: MyString
+  nominator_name: MyString
+  nominator_phone: MyString
+  nominator_email: MyString
+  nominee_name: MyString
+  nominee_address: MyString
+  nominee_phone: MyString
+  nominee_email: MyString
+  nominee_title: MyString
+
+two:
+  award_name: MyString
+  nominator_name: MyString
+  nominator_phone: MyString
+  nominator_email: MyString
+  nominee_name: MyString
+  nominee_address: MyString
+  nominee_phone: MyString
+  nominee_email: MyString
+  nominee_title: MyString

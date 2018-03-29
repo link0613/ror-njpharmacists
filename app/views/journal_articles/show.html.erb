@@ -1,0 +1,20 @@
+<h1>Journal Artical Details</h1>
+
+<h3>Submission Info:</h3>
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @journal.name %></dd>
+  <dt>Phone Number:</dt>
+  <dd><%= @journal.phone %></dd>
+  <dt>Email Address:</dt>
+  <dd><%= @journal.email %></dd>
+  <dt>Artical title:</dt>
+  <dd><%= @journal.article_title %></dd>
+  <dt>Abstract:</dt>
+  <dd><%= @journal.abstract %></dd>
+  <dt> Submission Date: </dt>
+  <dd><%= @journal.created_at.strftime("%m/%d/%y - %I %p")%></dd>
+</dl>
+
+<hr>
+<%= link_to 'Edit Journal', edit_journal_article_path(@journal) %> | <%= link_to 'Delete Journal', @journal, method: :delete, data: { confirm: 'Are you sure?'} %>

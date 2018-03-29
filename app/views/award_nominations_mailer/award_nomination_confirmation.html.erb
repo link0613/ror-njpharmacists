@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h2>Thank you for your nomination!</h2>
+    <p>
+      Your submission has been received, and it will be reviewed shortly. Your nomination information has been included below for your reference.<br>
+    </p>
+    
+    <h2>Award Nomination Details</h2>
+
+    <h3>Nominator Info:</h3>
+    <dl class="dl-horizontal">
+      <p>Name:<br>
+      <%= @nomination.nominator_name %></p>
+      <p>Phone Number:<br>
+      <%= @nomination.nominator_phone %></p>
+      <p>Email Address:<br>
+      <%= @nomination.nominator_email %></p>
+    </dl>
+
+    <hr>
+
+    <h3>Nominee Info:</h3>
+    <dl class="dl-horizontal">
+      <p>Award:<br>
+      <%= @nomination.award_name %></p>
+      <p>Name:<br>
+      <%= @nomination.nominee_name %></p>
+      <p>Address:<br>
+      <%= @nomination.nominee_address %></p>
+      <p>Phone Number:<br>
+      <%= @nomination.nominee_phone %></p>
+      <p>Email Address:<br>
+      <%= @nomination.nominee_email %></p>
+      <p>Title:<br>
+      <%= @nomination.nominee_title %></p>
+      <p>Tell us why the candidate should receive this award:<br>
+      <%= @nomination.reason_for_nomination %></p>
+      <p>Supporting Material:<br>
+      <%= link_to 'View Uploaded Material', @nomination.supporting_material.url(:original) if @nomination.supporting_material.exists? %></p>
+    </dl>
+
+  </body>
+</html>

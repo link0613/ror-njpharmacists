@@ -1,0 +1,77 @@
+<script type="text/javascript" src="http://www.papharmacists.com/global_inc/widgets/SponsorRotator/js/jquery.bxslider.js"></script>
+<link rel="stylesheet" type="text/css" href="http://www.papharmacists.com/global_inc/widgets/SponsorRotator/css/jquery.bxslider.css">
+<div id="bottom-left">
+  <div class="content">
+    <h3>Sponsors</h3>
+    <div class="sponsorrotator_97_20170204_064620_30053" style="visibility: visible;">
+      <div class="bx-wrapper" style="max-width: 100%; margin: 0px auto;">
+        <div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 204px;">
+          <ul id="bxslider_97_20170204_064620_30053" class="bxslider" style="width: auto; position: relative;">
+          
+            <li class="slide" style="float: none; list-style: outside none none; position: absolute; width: 277px; z-index: 0; display: list-item;">
+              <a href="#" target="_blank">
+                <img src="http://www.papharmacists.com/resource/dynamic/rotator/20151218_093232_31528.jpg" style="width: 360px; height: 190px;">
+              </a>
+            </li> 
+
+            <li class="slide" style="float: none; list-style: outside none none; position: absolute; width: 277px; z-index: 0; display: none;">
+              <a href="#">
+               <%= image_tag 'PMC_logowtagline_RGB.png',style:"width:300px; height: auto; margin-top:20px;" %>
+              </a>
+            </li>
+
+            <li class="slide" style="float: none; list-style: outside none none; position: absolute; width: 277px; z-index: 0; display: none;">
+              <a href="#">
+               <%= image_tag 'Walgreens.jpg',style:"width: 200px; height: 60px;margin-top:20px;" %>
+              </a>
+            </li>
+          </ul> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style type="text/css">
+  div.sponsorrotator_97_20170204_064620_30053 .bx-wrapper {
+   overflow: hidden;
+  }
+  div.sponsorrotator_97_20170204_064620_30053 .bx-wrapper img {
+  margin: auto;
+  }
+  div.sponsorrotator_97_20170204_064620_30053 .bx-wrapper .bx-viewport {
+  background: none;
+  border: none;
+  box-shadow: none;
+  left: 0px;
+  max-height: $heightpx;
+  min-height: $heightpx;
+  }
+  div.sponsorrotator_97_20170204_064620_30053 ul.bxslider {
+  padding-left: 0px;
+  margin: 0;
+  }
+</style>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#bxslider_97_20170204_064620_30053').bxSlider({
+    mode: 'fade',
+    useCSS: false,
+    responsive: true,
+    easing: 'swing',
+    infiniteLoop: true,
+    pager: false,
+    slideMargin: 0,
+    minSlides: 1,
+    maxSlides: 1,
+    moveSlides: 1,
+    auto: true,
+    pause: 2000,
+    autoHover: true,
+    controls: false,
+    adaptiveHeight: true,
+    onSliderLoad: function(){
+    	$('div.sponsorrotator_97_20170204_064620_30053').css('visibility', 'visible')}
+    });
+  });
+</script>

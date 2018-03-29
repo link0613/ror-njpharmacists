@@ -1,0 +1,9 @@
+<div class='page-header'>
+	<h2><%= @callout.callout_title %></h2>
+	<%= link_to 'Edit', edit_callout_path(@callout) %> |
+	<%= link_to 'Back', callouts_path %>
+</div>
+<h4>Content Preview:</h4>
+<p>
+  <%= raw(render_liquid_content(@callout.callout_content)) %>
+</p>

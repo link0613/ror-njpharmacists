@@ -1,0 +1,49 @@
+<%= simple_form_for [@blog,@blog_post] do |f| %>
+  <% if @blog_post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@blog_post.errors.count, "error") %> prohibited this blog_post from being saved:</h2>
+
+      <ul>
+      <% @blog_post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.input :post_title %>
+  </div>
+  <div class="field">
+    <%= f.input :post_subtitle %>
+  </div>
+  <div class="field">
+    <%= f.label :created_at, 'Published Date' %>
+    <div id="blog_post_created_at_wrapper" class="input-append">
+      <input data-format="yyyy-MM-dd" type="text" name="blog_post[created_at]" value="<%= @blog_post.created_at %>"></input>
+      <span class="add-on">
+        <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+        </i>
+      </span>
+    </div>
+    <script type="text/javascript">
+      $(function() {
+        $('#blog_post_created_at_wrapper').datetimepicker({
+          pickTime: false
+        });
+      });
+    </script>
+  </div>
+  <div class="field">
+    <%= f.input :featured_image %>
+  </div>
+  <div class="field">
+    <%= f.input :post_content, as: :ckeditor, input_html: { ckeditor: { filebrowserImageBrowseUrl: '/ckeditor/pictures', filebrowserImageUploadUrl: '/ckeditor/pictures' } } %><br>
+  </div>
+  <div class="form-actions">
+    <%= f.hidden_field :blog_id, value: @blog.id %>
+    <%= f.button :submit, class: 'btn btn-primary' %>
+    <%= link_to t('.cancel', default: t("helpers.links.cancel")),
+                blogs_path, class: 'btn' %>
+  </div>
+<% end %>

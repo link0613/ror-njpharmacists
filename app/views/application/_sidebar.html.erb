@@ -1,0 +1,55 @@
+<% if @viewing_admin %> 
+  <div class="col-xs-2 sidebar">
+    <h5>NAVIGATION</h5>
+    <ul class="nav nav-pills nav-stacked well">
+
+      <li class="<%= controller_name == 'pages' ? 'active' : ''%>">
+        <%= link_to 'Pages', pages_path %>
+      </li>
+
+      <li class="<%= controller_name == 'callouts' ? 'active' : ''%>">
+        <%= link_to 'Callouts', callouts_path %>
+      </li>
+
+      <li class="<%= controller_name == 'award_nominations' ? 'active' : ''%>">
+        <%= link_to 'Awards', award_nominations_path %>
+      </li>
+
+      <li class="<%= controller_name == 'journal_articles' ? 'active' : ''%>">
+        <%= link_to 'Journal', journal_articles_path %>
+      </li>
+
+      <li class="<%= controller_name == 'blogs' ? 'active' : ''%>">
+        <%= link_to 'Blogs', blogs_path %>
+      </li>
+
+      <li class="<%= controller_name == 'member_momenta' ? 'active' : ''%>">
+        <%= link_to 'Momentum', member_momenta_path %>
+      </li>
+
+      <li class="<%= controller_name == 'settings' ? 'active' : ''%>">
+        <%= link_to 'Settings', settings_path %>
+      </li>
+
+
+      <li class="<%= controller_name == 'faculty_proposals' ? 'active' : ''%>">
+        <%= link_to 'Faculty Proposals',faculty_proposals_path %>
+      </li>
+
+      <% if current_user %>
+        <li>
+          <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+        </li>
+      <% end %>
+      
+    </ul>
+  </div>
+<% elsif @assigned_callouts && @assigned_callouts.count > 0 %>
+  <div class="col-xs-3 sidebar">
+    <% @assigned_callouts.each do |assigned_callout| %>
+      <div class='callout'>
+        <%= raw(render_liquid_content(assigned_callout.try(:callout).try(:callout_content))) %>
+      </div>
+    <% end %>
+  </div>
+<% end %>

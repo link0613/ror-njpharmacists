@@ -1,0 +1,103 @@
+<% @pg_title = "Settings" %>
+
+<div class="tabbable">
+  <ul class="nav nav-tabs">
+    <li class="active"><a href='#homeSettings' data-toggle="tab">Homepage</a></li>
+    <li><a href='#socialSettings' data-toggle="tab">Social Media</a></li>
+    <li><a href='#globalSettings' data-toggle="tab">Global</a></li>    
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" id="homeSettings">      
+      <table class="table" width="100%" style="table-layout: fixed;">
+        <thead>
+          <tr>
+            <th>Setting Name</th>
+            <th>Setting Value</th>    
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @settings.each do |setting| %>
+            <% if setting[0].index('Global') == nil && (setting[0].index('Banner') != nil || setting[0].index('Homepage') != nil) %>
+              <tr>
+                <td width="200px">
+                  <%= setting[0] %>
+                </td>
+                <td>
+                  <% if setting[0].index("Homepage Blog Tab") != nil %>
+                    <%= Blog.find(get_setting_value(setting[0])).blog_title unless get_setting_value(setting[0]).nil? || get_setting_value(setting[0]).blank? %>
+                  <% else %>
+                    <%= get_setting_value(setting[0]) %>
+                  <% end %>
+                  <%= image_tag(get_setting_attachment(setting[0]), style: "max-width: 100%;max-height: 100px;") unless get_setting_attachment(setting[0]).nil? %>
+                </td>
+                <td>
+                  <%= link_to 'Edit', edit_setting_path(setting[1][:id]), class:'btn btn-default btn-sm pull-right' %>
+                </td>
+              </tr>
+            <% end %>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    
+    <div class="tab-pane" id="socialSettings">      
+      <table class="table" width="100%">
+        <thead>
+          <tr>
+            <th>Setting Name</th>
+            <th>Setting Value</th>    
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @settings.each do |setting| %>
+            <% if setting[0].index('Banner') == nil && setting[0].index('Global') == nil && (setting[0].index('URL') != nil || setting[0].index('Email') != nil) %>
+              <tr>
+                <td width="200px">
+                  <%= setting[0] %>
+                </td>
+                <td>
+                  <%= get_setting_value(setting[0]) %>
+                </td>
+                <td>
+                  <%= link_to 'Edit', edit_setting_path(setting[1][:id]), class:'btn btn-default btn-sm' %>
+                </td>
+              </tr>
+            <% end %>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    
+    <div class="tab-pane" id="globalSettings">      
+      <table class="table" width="100%">
+        <thead>
+          <tr>
+            <th>Setting Name</th>
+            <th>Setting Value</th>    
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @settings.each do |setting| %>
+            <% if setting[0].index('Global') != nil %>
+              <tr>
+                <td width="200px">
+                  <%= setting[0] %>
+                </td>
+                <td>
+                  <%= raw(get_setting_value(setting[0])).truncate(75) %>
+                </td>
+                <td>
+                  <%= link_to 'Edit', edit_setting_path(setting[1][:id]), class:'btn btn-default btn-sm' %>
+                </td>
+              </tr>
+            <% end %>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    
+  </div>
+</div>

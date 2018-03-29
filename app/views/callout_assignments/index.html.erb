@@ -1,0 +1,17 @@
+<div class="page-header">
+  <h1>Assign Callouts</h1>
+</div>
+
+<h3>Assigned Callouts<br><small>in order of appearance</small></h3>
+<% if @page.callouts.empty? %>
+	No callouts yet assigned.
+<% end %>
+<ol>
+	<% @page.cached_callout_assignments.each do |assigned_callout| %>
+		<li><%= assigned_callout.callout.callout_title%> <%= link_to raw("<span class='glyphicon glyphicon-remove'></span>"), [assigned_callout.page, assigned_callout], method: :delete, data: {confirm: 'Are you sure?'} %></li>
+	<% end %>
+</ol>
+
+<hr>
+
+<%= render partial: 'callout_assignment_form' %>

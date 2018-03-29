@@ -1,0 +1,23 @@
+<% @pg_title = @blog.blog_title %>
+<% @breadcrumbs = build_blog_breadcrumbs %>
+<% @blog_posts.page(params[:page]).each do |post| %>
+
+  <div class="row blog-entry">
+    <div class="col-xs-4">
+      <%= image_tag post.featured_image.url %>
+    </div>
+    <div class="col-xs-4" style="margin-left:10px;">
+      <a href="<%= build_blog_post_url(post) %>"><h4 class="tk-myriad-pro-condensed"><%= raw(post.post_title) %></h4></a>
+      <h5 class="tk-myriad-pro-condensed"><%= raw(post.post_subtitle) %></h5>
+      <h7 class="tk-myriad-pro-condensed"><%= post.created_at.to_s(:month_day_year) %></h7>
+      <p>
+        <%= raw(sanitize(post.post_content, tags: []).truncate(200)) %>  
+      </p>
+      <%= link_to (image_tag 'blog_read_more.png'), build_blog_post_url(post) %>
+    </div>
+  </div>
+
+<% end %>
+<div class="digg_pagination pull-right">
+<%= will_paginate @blog_posts.page(params[:page]), container: false  %>
+</div>

@@ -1,0 +1,31 @@
+<% @pg_title = @setting.setting_name %>
+
+<% is_remote = @setting.setting_name.index('Custom CSS Styling') != nil %>
+
+<%= simple_form_for @setting, remote: is_remote do |f| %>
+
+  <% if @setting.requires_file.nil? || @setting.requires_file == true %>
+    <div style='display:none'>
+      <%= f.input :setting_name %>
+    </div>
+    <%= f.input :setting_attachment, label: @setting.setting_name %>
+  <% elsif @setting.setting_name.index('Homepage Blog Tab') != nil  %>
+    <%= f.input :setting_value, collection: Blog.order(:blog_title).all, label_method: :blog_title, value_method: :id %>
+  <% elsif @setting.setting_name.index('Custom CSS Styling') != nil  %>
+    <% is_css = true %>
+    <%= f.text_area :setting_value, label: @setting.setting_name, rows: 40, style: 'width:90%;' %>
+    <script type="text/javascript">
+      var myCodeMirror = CodeMirror.fromTextArea(document.getElementById('setting_setting_value'), {});
+    </script>
+    <br>
+  <% else %>
+    <%= f.input :setting_value, label: @setting.setting_name %>
+  <% end %>
+  
+  <div class="form-actions">
+    <%= f.button :submit, 'Save and Continue Editing', class: 'btn btn-primary', remote: true unless is_css.nil? %>
+    <%= f.button :submit, class: 'btn btn-primary' %>
+    <%= link_to 'Cancel',
+                settings_path, class: 'btn btn-default' %>
+  </div>
+<% end %>

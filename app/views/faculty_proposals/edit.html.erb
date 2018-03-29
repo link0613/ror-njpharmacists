@@ -1,0 +1,5 @@
+<h1>Edit faculty proposal</h1>
+<%= render 'faculty_proposel_form', { url: faculty_proposal_path , form_request: false, faculty_proposel: @faculty_propsel}  %>
+
+<%= link_to 'Show', faculty_proposal_path(@faculty_propsel) %> |
+<%= link_to 'Back', faculty_proposals_path %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  about_recognition: MyText
+  momentum_date: 2016-08-17 13:46:40
+
+two:
+  name: MyString
+  about_recognition: MyText
+  momentum_date: 2016-08-17 13:46:40

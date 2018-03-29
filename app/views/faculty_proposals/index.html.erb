@@ -1,0 +1,35 @@
+<h1>Faculty Proposals</h1>
+
+<table class='table table-striped'>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Office Phone</th>
+      <th>Submitted Proposals</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @faculty_proposals.each do |faculty_propsel| %>
+      <tr>
+        <td><%= faculty_propsel.name %></td>
+        <td><%= faculty_propsel.address %></td>
+        <td><%= faculty_propsel.city %></td>
+        <td><%= faculty_propsel.office_phone %></td>
+        <td><%= faculty_propsel.created_at.strftime("%m/%d/%Y - %I %p") %></td>
+        <td><%= link_to 'Show Faculty Proposal', faculty_proposal_path(faculty_propsel), class: 'btn btn-primary' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Faculty propsel', new_faculty_proposal_path,class: "btn" %>
+
+
+

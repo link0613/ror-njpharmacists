@@ -1,0 +1,26 @@
+<% @pg_title = "Page Manager" %>
+<script type="text/javascript">
+	$(function(){
+		$('.media-root .media').hide();
+		$('.media-root .arrow-down').hide();
+	});
+
+
+	function showSubpages(elem_id){
+		elemObj = $('#pg-' + elem_id + ' ~ .media-child > .media');
+		$('#pg-' + elem_id + ' .arrow-down').toggle();
+		$('#pg-' + elem_id + ' .arrow-up').toggle();
+		elemObj.toggle('slide');
+		
+	}
+
+</script>
+<ul class="media-list">
+  <% @pages.each do |pg| %>
+    <%= raw(build_page_listing(pg,true)) %>
+  <% end %>
+</ul>
+
+<%= link_to t('.new', default: t("helpers.links.new")),
+            new_page_path,
+            class: 'btn btn-primary' %>

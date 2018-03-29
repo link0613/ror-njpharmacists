@@ -1,0 +1,43 @@
+<%= simple_form_for (article), url: '/process_journal_article.js', remote: true do |f| %>
+  <% if article.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+      <ul>
+      <% article.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <h3>Info:</h3>
+  
+  <div class="field"><%= f.input :name %></div>
+  <div class="field"><%= f.input :phone %></div>
+  <div class="field"><%= f.input :email %></div>
+  <div class="field"><%= f.input :article_title %></div>
+  <div class="field"><%= f.input :abstract, label: 'Abstract',:as => :text%></div>
+  <div class="field">
+    <div class="form-group">
+      <%=recaptcha_tags%>
+    </div>
+  </div>
+  
+  <div class="actions">
+  <%= f.button :submit, 'Submit', class: 'btn btn-primary', 'data-loading-text' => 'Submitting...'  %>
+  </div>
+<% end %>
+<script type='text/javascript'>
+$(function(){
+  function showLoading() { 
+    $('form.new_journal_article input[type=submit]').attr('disabled','disabled').val('Loading...'); 
+  };
+  function resetLoading() { 
+    $('form.new_journal_article input[type=submit]').removeAttr('disabled').val('Submit'); 
+  };
+  $("form.new_journal_article")
+  .bind("ajax:loading",  showLoading)
+  .bind("ajax:complete", resetLoading);
+});
+</script>

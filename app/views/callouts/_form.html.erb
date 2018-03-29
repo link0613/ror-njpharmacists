@@ -1,0 +1,23 @@
+<%= simple_form_for @callout do |f| %>
+  <% if @callout.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@callout.errors.count, "error") %> prohibited this callout from being saved:</h2>
+
+      <ul>
+      <% @callout.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.input :callout_title %>
+  </div>
+  <div class="field">
+    <%= f.input :callout_content, as: :ckeditor, input_html: { ckeditor: { filebrowserImageBrowseUrl: '/ckeditor/pictures', filebrowserImageUploadUrl: '/ckeditor/pictures' } } %><br>
+  </div>
+  <div class="actions">
+    <%= f.button :submit, class: 'btn btn-primary' %>
+  </div>
+<% end %>

@@ -1,0 +1,36 @@
+<% @pg_title = "Blogs" %>
+<%- model_class = Blog -%>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:blog_title) %></th>
+      <th><%=t '.actions', default: t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @blogs.each do |blog| %>
+      <tr>
+        <td><%= blog.blog_title %></td>
+        <td>
+          <%= link_to 'New Post',
+              new_blog_blog_post_path(blog),
+              class: 'btn btn-sm btn-primary',
+              target: '_blank' %>
+          <%= link_to 'Edit Posts',
+                      blog_path(blog.id),
+                      class: 'btn btn-default btn-sm' %>
+          <%= link_to 'Preview Blog Listing',
+                      build_blog_url(blog.id),
+                      class: 'btn btn-default btn-sm',
+                      target: '_blank' %>
+          <%= link_to 'Rename',
+                      edit_blog_path(blog), class: 'btn btn-default btn-sm' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Blog',
+            new_blog_path,
+            class: 'btn btn-primary' %>
